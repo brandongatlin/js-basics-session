@@ -6,8 +6,8 @@
 function sarcasticate(input) {
     // Parts:
     // a. validate input
-    if (!typeof input === 'string') {
-        throw new Error('input should be of type string');
+    if (typeof input !== 'string') {
+        throw new TypeError('input should be of type string');
     }
     // change input from string to array of strings
     const inputArray = input.split('');
